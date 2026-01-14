@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Nume Prenume</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <b>Nume Prenume</b>
+      <span>Contact</span>
+    </div>
+    <nav>
+      <a href="index.html">Acasa</a>
+      <a href="despre.html">Despre</a>
+      <a href="proiecte.html">Proiecte</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Formular de contact</h2>
+    <p style="color: var(--muted);">
+      Completeaza campurile si apasa “Trimite”. Se va deschide automat aplicatia ta de e-mail cu mesajul completat.
+    </p>
+
+    <form id="contactForm">
+      <div class="form-row">
+        <input type="text" id="nume" placeholder="Nume" required />
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <input type="text" id="subiect" placeholder="Subiect" required />
+      <textarea id="mesaj" placeholder="Mesaj" required></textarea>
+
+      <button type="submit">Trimite</button>
+    </form>
+
+    <p style="margin-top:10px; color: var(--muted); font-size:13px;">
+      Nota: in fisierul <b>js/contact.js</b> schimba adresa TA de e-mail (TO_EMAIL).
+    </p>
+  </section>
+
+  <footer>
+    Autor: <b>Nume Prenume</b>
+  </footer>
+</main>
+
+<script src="js/contact.js"></script>
+</body>
+</html>
