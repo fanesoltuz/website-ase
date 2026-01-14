@@ -1,0 +1,198 @@
+:root{
+    --bg:#0b1020;
+    --card:#121a33;
+    --text:#e9ecf5;
+    --muted:#aab2d5;
+    --accent:#5eead4;
+    --accent2:#60a5fa;
+  }
+  
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 10%, rgba(96,165,250,.18), transparent 55%),
+                radial-gradient(1000px 500px at 70% 0%, rgba(94,234,212,.14), transparent 55%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  
+  .container{
+    width:min(1050px, 92%);
+    margin:0 auto;
+    padding:24px 0;
+  }
+  
+  header{
+    position: sticky;
+    top:0;
+    background: rgba(11,16,32,.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    z-index:10;
+  }
+  
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:14px 0;
+  }
+  
+  .brand{
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .brand b{ font-size:18px; letter-spacing:.2px; }
+  .brand span{ color:var(--muted); font-size:13px; }
+  
+  nav a{
+    color:var(--text);
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid transparent;
+    font-size:14px;
+  }
+  nav a:hover{
+    border-color: rgba(255,255,255,.14);
+    background: rgba(255,255,255,.05);
+  }
+  
+  .hero{
+    margin-top:24px;
+    padding:22px;
+    border:1px solid rgba(255,255,255,.10);
+    background: linear-gradient(180deg, rgba(18,26,51,.92), rgba(18,26,51,.70));
+    border-radius:16px;
+    display:grid;
+    gap:14px;
+  }
+  
+  .hero h1{ font-size:30px; }
+  .hero p{ color:var(--muted); }
+  
+  .grid{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:16px;
+  }
+  
+  .card{
+    grid-column: span 6;
+    border:1px solid rgba(255,255,255,.10);
+    background: rgba(18,26,51,.70);
+    border-radius:16px;
+    padding:16px;
+  }
+  
+  .card h2{ font-size:18px; margin-bottom:8px; }
+  .card p{ color:var(--muted); font-size:14px; }
+  
+  .badge{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 10px;
+    border-radius:999px;
+    font-size:13px;
+    border:1px solid rgba(255,255,255,.12);
+    color: var(--text);
+    background: rgba(255,255,255,.06);
+  }
+  
+  .btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#06121a;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    font-weight:700;
+  }
+  
+  .section{
+    margin-top:22px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.10);
+    background: rgba(18,26,51,.55);
+    border-radius:16px;
+  }
+  
+  .section h2{ margin-bottom:10px; }
+  
+  figure{
+    margin-top:14px;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.10);
+    background: rgba(0,0,0,.25);
+  }
+  figure img{
+    width:100%;
+    display:block;
+    max-height:360px;
+    object-fit:cover;
+  }
+  figcaption{
+    padding:10px 12px;
+    font-size:13px;
+    color:var(--muted);
+    display:flex;
+    gap:10px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+  
+  a.external{
+    color: var(--accent);
+    text-decoration:none;
+  }
+  a.external:hover{ text-decoration:underline; }
+  
+  form{
+    display:grid;
+    gap:10px;
+    margin-top:10px;
+  }
+  input, textarea{
+    width:100%;
+    padding:12px 12px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.14);
+    background: rgba(11,16,32,.35);
+    color:var(--text);
+    outline:none;
+  }
+  textarea{ min-height:140px; resize:vertical; }
+  
+  .form-row{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+  }
+  
+  button{
+    padding:12px 14px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    font-weight:800;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color:#06121a;
+  }
+  
+  footer{
+    margin-top:26px;
+    padding:18px 0;
+    color:var(--muted);
+    font-size:13px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  
+  @media (max-width: 780px){
+    .card{ grid-column: span 12; }
+    .form-row{ grid-template-columns: 1fr; }
+    nav{ display:flex; flex-wrap:wrap; justify-content:flex-end; }
+  }
